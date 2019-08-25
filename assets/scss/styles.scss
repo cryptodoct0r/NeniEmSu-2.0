@@ -26,12 +26,14 @@ h4,
 h5,
 h6,
 [data-first]:before {
-  font-family: 'Corben', serif !important;
+  font-family: 'Corben', cursive, serif !important;
   font-variant-ligatures: none;
   font-weight: bold;
 }
 
-p {
+p,
+a {
+  font-family: 'Nobile', Helvetica, Arial, sans-serif;
   color: #0a0a0a;
 }
 

@@ -24,8 +24,7 @@ export default {
       href: '/favicon.ico'
     }, {
       rel: 'stylesheet',
-      type: 'font',
-      href: 'https://fonts.googleapis.com/css?family=Corben:400,700|Muli|Roboto:300,400,500,700,900&display=swap'
+      href: 'https://fonts.googleapis.com/css?family=Corben:400,700|Muli|Nobile:400i,500|Roboto:300,400,500,700,900&display=swap'
     }]
   },
   /*

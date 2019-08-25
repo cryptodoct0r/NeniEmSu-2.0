@@ -1,51 +1,62 @@
 <template>
-  <div class="container">
+  <div>
+
     <div class="intro">
+      <div class="container my-auto">
+        <div class="col-md-8">
 
-      <h1
-        data-aos="fade-right"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        class="title my-5"
-      >
-        Neni Emmmanuel
-      </h1>
-      <p
-        data-aos="fade-left"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
-        class="subtitle my-2"
-      >
-        Medical Student by 🌞 Full Stack Developer by 🌙, ❤️ to learn new stuff from all calls of life, 👍 to go on walks/bike rides & a proponent of self Development.
-      </p>
-      <div class="links my-3">
-        <a
-          href="#"
-          target="_blank"
-          class="button--green no-touchevents"
-        >
-          Download Cv
-        </a>
-        <a
-          href="#"
-          target="_blank"
-          class="button--grey"
-        >
-          Projects
-        </a>
-      </div>
+          <h1
+            data-aos="fade-right"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            class="title"
+          >
+            Neni Emmmanuel
+          </h1>
+          <p
+            data-aos="fade-left"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            class="subtitle"
+          >
+            <span class="text-primary">Medical Student</span> by 🌞 <span class="text-primary">Full Stack Developer</span> by 🌙, ❤️ to learn new stuff from all calls of life, 👍 to go on walks/bike rides & a proponent of <span class="text-primary">Self Development</span>.
 
-      <div class="chevron-container ml-auto">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <span class="text">Scroll down</span>
+          </p>
+
+          <p class="subtitle"> <q>Some ransome quote from the internet goes here!</q> <br><span class="text-primary text-right">Neni emsu</span> </p>
+          <div class="links my-3">
+            <button
+              href="#"
+              target="_blank"
+              class="button--green no-touchevents"
+            >
+              Download Cv
+            </button>
+            <button
+              href="#"
+              target="_blank"
+              class="button--grey"
+            >
+              Projects
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="chevron-container mx-auto">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <span class="text">Scroll down</span>
+
+        </div>
 
       </div>
 
     </div>
 
-    <div id="about">
+    <div class="container">
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere dolorum iure delectus corrupti beatae atque cum accusamus quos. Totam praesentium molestiae placeat numquam impedit. Minus quas numquam eos odio repellendus vel tempora obcaecati assumenda aperiam cupiditate exercitationem inventore, tempore quam sint quo, suscipit, temporibus praesentium quisquam recusandae cum laudantium? Minima atque alias quas voluptas deleniti numquam, maiores, quam dolor ad, libero odit quo excepturi ipsa. Consequuntur voluptate nemo laudantium facilis temporibus minima explicabo magni esse odio ipsam, debitis, molestias sequi delectus, cum dolor. Dolorum eaque alias asperiores vel, dolores corporis id aliquam placeat. Maiores molestiae iure, incidunt quae doloremque dignissimos.</p>
       <p
         data-aos="fade-left"
@@ -70,30 +81,42 @@ export default {
 
 <style>
 .intro {
-  margin: 0 auto;
-  min-height: 100vh;
+  background-image: linear-gradient(
+      to top,
+      /* rgba(159, 90, 253, 0.52), */ rgba(86, 130, 3, 0.25),
+      rgba(27, 27, 27, 0.52)
+    ),
+    url("~assets/img/backgroudImagef.jpg");
 
+  background-color: #0a0a0a;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+
+  display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: #ffffff;
   letter-spacing: 1px;
+  opacity: 1;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-size: 1.5rem;
+  color: #d8d881;
   word-spacing: 5px;
   padding-bottom: 15px;
+  text-align: left;
+  opacity: 1;
 }
 
 .links {
@@ -130,7 +153,7 @@ export default {
   top: 0;
   height: 100%;
   width: 51%;
-  background: #fff;
+  background: #0a0a0a;
 }
 
 .chevron:before {
@@ -164,6 +187,7 @@ export default {
 
 p {
   color: #0a0a0a;
+  font-family: "Nobile", Helvetica, Arial, sans-serif;
 }
 
 .text {
@@ -172,7 +196,7 @@ p {
   margin-left: -30px;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 12px;
-  color: #fff;
+  color: #0a0a0a;
   text-transform: uppercase;
   white-space: nowrap;
   opacity: 0.25;
