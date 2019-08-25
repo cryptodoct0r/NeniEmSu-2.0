@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="cursor"></div>
+    <div class="cursor">
+
+    </div>
 
     <TheHeader />
     <nuxt />
@@ -20,25 +22,6 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -71,30 +54,34 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  cursor: none;
-  background: rgb(27, 27, 27);
+  cursor: url("~assets/img/transparent-cursor.png"), default;
+  // background: #ce8243;
+  // background: #d8d881;
+  // background: #0a0a0a;
+  // background: rgb(27, 27, 27);
+  background: #fbfbfb;
   overflow-x: hidden;
 }
 
 .cursor {
-  width: 10px;
-  height: 10px;
-  border: 1px solid whitesmoke;
+  width: 15px;
+  height: 15px;
+  border: 1px solid orangered;
   border-radius: 50%;
   position: absolute;
   z-index: 10000;
   // transition-duration: 200ms;
   // transition-timing-function: ease-out;
-  // animation: cursorAnim 0.5s infinite alternate;
+  animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
 }
 
 .cursor::after {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  border: 4px solid greenyellow;
+  border: 4px solid #ce8243;
   border-radius: 50%;
   opacity: 0.5;
   top: -1px;

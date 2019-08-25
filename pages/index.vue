@@ -162,6 +162,10 @@ export default {
   }
 }
 
+p {
+  color: #0a0a0a;
+}
+
 .text {
   display: block;
   margin-top: 75px;

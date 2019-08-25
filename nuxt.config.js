@@ -22,6 +22,10 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
+    }, {
+      rel: 'stylesheet',
+      type: 'font',
+      href: 'https://fonts.googleapis.com/css?family=Corben:400,700|Muli|Roboto:300,400,500,700,900&display=swap'
     }]
   },
   /*
@@ -33,7 +37,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['aos/dist/aos.css'],
+  css: ['aos/dist/aos.css',
+    '@/assets/scss/styles.scss'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -59,7 +65,15 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
   ],
+
+
+  styleResources: {
+    scss: [
+      '~/assets/scss/_config.scss'
+    ]
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

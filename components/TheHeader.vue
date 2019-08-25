@@ -18,13 +18,14 @@
         <b-navbar-nav class="ml-auto">
 
           <b-nav-item href="#">Portfolio</b-nav-item>
-          <b-nav-item href="#">Timeline</b-nav-item>
 
           <b-nav-item
             href="#"
             disabled
-          >Blog</b-nav-item>
+          >Timeline</b-nav-item>
           <b-nav-item href="#">Contact</b-nav-item>
+
+          <b-nav-item to="blog">Blog</b-nav-item>
 
           <b-nav-item-dropdown
             text="Lang"
