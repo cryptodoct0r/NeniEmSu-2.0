@@ -45,7 +45,7 @@
 
     </div>
 
-    <div>
+    <div id="about">
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere dolorum iure delectus corrupti beatae atque cum accusamus quos. Totam praesentium molestiae placeat numquam impedit. Minus quas numquam eos odio repellendus vel tempora obcaecati assumenda aperiam cupiditate exercitationem inventore, tempore quam sint quo, suscipit, temporibus praesentium quisquam recusandae cum laudantium? Minima atque alias quas voluptas deleniti numquam, maiores, quam dolor ad, libero odit quo excepturi ipsa. Consequuntur voluptate nemo laudantium facilis temporibus minima explicabo magni esse odio ipsam, debitis, molestias sequi delectus, cum dolor. Dolorum eaque alias asperiores vel, dolores corporis id aliquam placeat. Maiores molestiae iure, incidunt quae doloremque dignissimos.</p>
       <p
         data-aos="fade-left"
