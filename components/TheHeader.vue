@@ -63,7 +63,8 @@ export default {
   color: #568203;
 }
 
-.nuxt-link {
+.nav-link,
+.nuxt-link-active {
   transition: all 500ms ease-in-out;
   line-height: 1.5rem;
 

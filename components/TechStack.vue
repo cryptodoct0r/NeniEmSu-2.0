@@ -8,7 +8,10 @@
       <div class="row">
         <div class="col">
           <div>
-            <h2 data-aos="fade">Technologies i currently use</h2>
+            <h2
+              data-aos="fade"
+              class="mb-3"
+            >Technologies i currently use</h2>
           </div>
         </div>
       </div>
@@ -42,7 +45,7 @@
               header="Dev-Tools/Version Control"
               class="text-center"
             >
-              <b-card-text>Chrome Dev tools, Vue Dev tools, Git, Github, Bash/CMP </b-card-text>
+              <b-card-text>Chrome Dev tools, Vue Dev tools, Git, Github, Bash/Cmd </b-card-text>
             </b-card>
           </b-card-group>
         </div>
@@ -72,10 +75,10 @@
               data-aos="fade-up"
               bg-variant="danger"
               text-variant="white"
-              header="Design Tools"
+              header="Design Tools/Tools"
               class="text-center"
             >
-              <b-card-text>Figma, Adobe XD, Gimp</b-card-text>
+              <b-card-text>Vs-code, Figma, Adobe XD, Gimp</b-card-text>
             </b-card>
           </b-card-group>
         </div>
