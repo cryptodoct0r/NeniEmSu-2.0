@@ -319,7 +319,7 @@ p {
 @media screen and (max-width: 425px) {
   #landing {
     clip-path: polygon(50% 0%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0);
-    height: 100vh;
+    height: 90vh;
   }
 
   .wave {
@@ -332,7 +332,7 @@ p {
     height: 24px;
 
     cursor: pointer;
-    top: 75vh;
+    top: 68vh;
     z-index: 16;
   }
 }

@@ -17,8 +17,8 @@
           >
             <tilt
               class="cols"
-              max="30"
-              perspective="500"
+              max=30
+              perspective=500
             >
               <a
                 href="#"
@@ -96,10 +96,10 @@ section.about .about-img {
 //   width: 100%;
 //   height: auto;
 // }
-// img {
-//   vertical-align: middle;
-//   border-style: none;
-// }
+img {
+  vertical-align: middle;
+  border-style: none;
+}
 
 .pb-100 {
   padding-bottom: 100px !important;
@@ -137,6 +137,7 @@ section.about .about-img {
   width: 100%;
   height: 100%;
   margin: 0;
+  object-fit: cover;
 }
 
 .tilter__figure > * {
