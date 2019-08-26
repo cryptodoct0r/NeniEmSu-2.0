@@ -60,7 +60,14 @@ body {
   // background: #0a0a0a;
   // background: rgb(27, 27, 27);
   background: #fbfbfb;
+
+  color: #484848;
   overflow-x: hidden;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 1.4em;
 }
 
 .cursor {
@@ -125,15 +132,20 @@ body {
   border: 1px solid #3b8070;
 }
 
-p {
-  color: white;
-  font-family: "arial";
-  text-align: center;
-  margin-top: 50px;
-  font-size: 1.4em;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f6f6f6;
+}
 
-  a {
-    color: teal;
-  }
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $primary;
 }
 </style>

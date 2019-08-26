@@ -1,16 +1,16 @@
 <template>
   <div id="headerComponent">
     <b-navbar
-      toggleable="md"
+      toggleable="lg"
       fixed="top"
       type="dark"
-      variant="dark"
+      data-aos="fade-down"
     >
       <div class="container">
         <b-navbar-brand
           class="font-family-headings"
           to="/"
-        >🥑 NeniEmSu</b-navbar-brand>
+        >NeniEmSu</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -22,10 +22,7 @@
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
 
-            <b-nav-item
-              data-aos="fade-down"
-              href="#"
-            >Portfolio</b-nav-item>
+            <b-nav-item href="#">Portfolio</b-nav-item>
 
             <b-nav-item
               href="#"
@@ -62,8 +59,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.font-family-headings,
-.b-navbar-brand {
+.font-family-headings {
   color: #568203;
+}
+
+nav.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  background-color: rgba(34, 34, 34, 0.8);
+}
+
+nav.navbar .navbar-toggler,
+nav.navbar .navbar-toggler:focus {
+  border: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    text-align: right;
+  }
 }
 </style>
