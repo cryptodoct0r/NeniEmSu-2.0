@@ -63,6 +63,19 @@ export default {
   color: #568203;
 }
 
+.nuxt-link {
+  transition: all 500ms ease-in-out;
+  line-height: 1.5rem;
+
+  &:hover {
+    text-decoration: overline lime;
+  }
+}
+
+.nuxt-link-exact-active {
+  text-decoration: overline lime;
+}
+
 nav.navbar {
   padding-top: 20px;
   padding-bottom: 20px;

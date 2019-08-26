@@ -1,7 +1,7 @@
 <template>
   <section
     id="landing"
-    class="banner banner-centered"
+    class="banner banner-centered waveWrapper waveAnimation"
     data-stellar-background-ratio=".7"
     data-scroll-index="0"
   >
@@ -12,45 +12,36 @@
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
         >Neni Emmanuel</h1>
-        <p
-          class="cd-headline clip mt-30"
-          data-aos="fade-up"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-        >
-          <span>FullStack developer &amp; Medical student!</span><br>
-          <q>The Way Get Started Is To Quit Talking And Begin Doing.</q><br>
-          <span class="text-italic">Walt Disney</span>
-
-        </p>
-
-        <b-button
-          data-aos="fade-up"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          variant="dark"
-          class="btn read-more border-0 btn-primary"
-        >Download Cv</b-button>
-
         <div
-          class="social-icons"
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
         >
-          <a
-            href="https://github.com/cryptodoct0r"
-            target="_blank"
-            rel="no-referal"
-          ><i class="fa fa-github"></i></a>
-          <a
-            href="https://twitter.com/NeniEmmanuel"
-            target="_blank"
-            rel="no-referal"
-          ><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-dribbble"></i></a>
-          <a href="#"><i class="fa fa-google-plus"></i></a>
-          <a href="#"><i class="fa fa-pinterest"></i></a>
+          <p class="cd-headline clip mt-30">
+            <span>FullStack developer &amp; Medical student!</span><br>
+            <q>The Way Get Started Is To Quit Talking And Begin Doing.</q><br>
+            <span class="text-italic">Walt Disney</span>
+
+          </p>
+
+          <div class="social-icons">
+            <b-button
+              variant="dark"
+              class="btn read-more border-0 btn-primary"
+            >Download Cv</b-button>
+            <a
+              href="https://github.com/cryptodoct0r"
+              target="_blank"
+              rel="no-referal"
+            ><i class="fa fa-github"></i></a>
+            <a
+              href="https://twitter.com/NeniEmmanuel"
+              target="_blank"
+              rel="no-referal"
+            ><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+
+          </div>
         </div>
 
       </div>
@@ -62,6 +53,24 @@
       <div class="chevron"></div>
       <span class="text">Scroll down</span>
 
+    </div>
+    <div class="waveWrapperInner bgTop">
+      <div
+        class="wave waveTop"
+        style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"
+      ></div>
+    </div>
+    <div class="waveWrapperInner bgMiddle">
+      <div
+        class="wave waveMiddle"
+        style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"
+      ></div>
+    </div>
+    <div class="waveWrapperInner bgBottom">
+      <div
+        class="wave waveBottom"
+        style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"
+      ></div>
     </div>
   </section>
 
@@ -75,6 +84,76 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  // background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
 #landing {
   background-image: linear-gradient(
       to top,
@@ -88,10 +167,11 @@ export default {
   background-size: cover;
 
   height: 90vh;
+  width: 100vw;
 }
 
 .banner {
-  width: 100%;
+  width: 100vw;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,7 +188,7 @@ export default {
   top: 50%;
   position: absolute;
   color: #fff;
-  z-index: 11;
+  z-index: 16;
   width: 100%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -151,7 +231,8 @@ a:focus {
   height: 24px;
 
   cursor: pointer;
-  top: 65vh;
+  top: 60vh;
+  z-index: 16;
 }
 
 .chevron {
@@ -235,9 +316,24 @@ p {
   }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 425px) {
   #landing {
-    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 85%, 50% 100%, 0% 85%, 0 0);
+    height: 100vh;
+  }
+
+  .wave {
+    display: none;
+  }
+
+  .chevron-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+    top: 75vh;
+    z-index: 16;
   }
 }
 </style>

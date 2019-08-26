@@ -16,7 +16,7 @@
         <div>
           <b-card-group deck>
             <b-card
-              data-aos="fade-left"
+              data-aos="fade-up"
               bg-variant="primary"
               text-variant="white"
               header="Programing Languages"
@@ -26,7 +26,7 @@
             </b-card>
 
             <b-card
-              data-aos="fade-left"
+              data-aos="fade-up"
               bg-variant="secondary"
               text-variant="white"
               header="FrameWorks/Libraries"
@@ -36,7 +36,7 @@
             </b-card>
 
             <b-card
-              data-aos="fade-left"
+              data-aos="fade-up"
               bg-variant="success"
               text-variant="white"
               header="Dev-Tools/Version Control"
@@ -49,7 +49,7 @@
         <div class="mt-3">
           <b-card-group deck>
             <b-card
-              data-aos="fade-left"
+              data-aos="fade-up"
               bg-variant="info"
               text-variant="white"
               header="Testing/Debugging"
@@ -59,7 +59,7 @@
             </b-card>
 
             <b-card
-              data-aos="fade-left"
+              data-aos="fade-up"
               bg-variant="warning"
               text-variant="white"
               header="Spoken Languages"
@@ -69,7 +69,7 @@
             </b-card>
 
             <b-card
-              data-aos="fade-left"
+              data-aos="fade-up"
               bg-variant="danger"
               text-variant="white"
               header="Design Tools"
