@@ -19,8 +19,8 @@
         >
           <p class="cd-headline clip mt-30">
             <span>FullStack developer &amp; Medical student!</span><br>
-            <q>The Way Get Started Is To Quit Talking And Begin Doing.</q><br>
-            <span class="text-italic">Walt Disney</span>
+            <q>The Way To Get Started Is To Quit Talking And Begin Doing.</q><br>
+            <span class="author">Walt Disney</span>
 
           </p>
 
@@ -112,6 +112,20 @@ export default {
   bottom: -1px;
   // background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
 }
+
+q {
+  color: lightgrey;
+  text-align: justify;
+}
+
+.author {
+  color: darken(hsl(50, 5, 97), 15%);
+
+  &:before {
+    content: "\2015";
+  }
+}
+
 .bgTop {
   z-index: 15;
   opacity: 0.5;

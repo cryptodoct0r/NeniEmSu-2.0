@@ -59,17 +59,115 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [],
-  /*
-   ** Nuxt.js modules
-   */
+
+  i18n: {
+    defaultLocale: "en",
+    vueI18nLoader: true,
+    lazy: false,
+    langDir: null,
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: false,
+      fallbackLocale: "en"
+    },
+    vueI18n: {
+      fallbackLocale: "en",
+      messages: {
+        uk: {
+          "links": {
+            "home": "Головна",
+            "menu": "Меню",
+            "delivery": "Доставка їжі",
+            "reserveAPlace": "Резервація місця",
+            "reservation": "Резервація",
+            "aboutUs": "Про нас",
+            "atmosphere": "Атмосфера",
+            "vacancy": "Ваканції",
+            "contact": "Контакти",
+          },
+          "ukrainian": "Українська",
+          "english": "English",
+          "russian": "Русский"
+        },
+        en: {
+          "links": {
+            "home": "Home",
+            "menu": "Menu",
+            "delivery": "Food delivery",
+            "reserveAPlace": "Reservation of place",
+            "reservation": "Reservation",
+            "aboutUs": "About us",
+            "atmosphere": "Atmosphere",
+            "vacancy": "Vacancies",
+            "contact": "Contacts"
+          },
+          "ukrainian": "Українська",
+          "english": "English",
+          "russian": "Русский"
+        },
+        ru: {
+          "links": {
+            "home": "Главная",
+            "menu": "Меню",
+            "delivery": "Доставка еды",
+            "reserveAPlace": "Резервация места",
+            "reservation": "Резервация",
+            "aboutUs": "О нас",
+            "atmosphere": "Атмосфера",
+            "vacancy": "Вакансии",
+            "contact": "Контакты"
+          },
+          "ukrainian": "Українська",
+          "english": "English",
+          "russian": "Русский"
+        }
+
+      }
+    }
+  },
+
   modules: [
-    // Doc: https://bootstrap-vue.js.org/docs/
+
     'bootstrap-vue/nuxt',
-    // Doc: https://axios.nuxtjs.org/usage
+
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/netlify-files',
+    '@nuxtjs/style-resources',
+    ['nuxt-i18n', {
+      seo: true,
+      baseUrl: 'https://barbaresco.netlify.com',
+      locales: [{
+          iso: 'uk-Uk',
+          code: 'uk',
+          name: 'Українська'
+        },
+        {
+          iso: 'en-US',
+          code: 'en',
+          name: 'English'
+        },
+        {
+          iso: 'ru-RU',
+          code: 'ru',
+          name: 'Русский'
+        }
+      ]
+    }],
+
   ],
+
+  proxy: {
+    '/.netlify/functions/': {
+      target: 'http://localhost:8000'
+    }
+  },
+
+  netlifyFiles: {
+    existingFilesDirectory: "./netlify/"
+  },
 
 
   styleResources: {

@@ -1,3 +1,29 @@
+<i18n>
+{
+  "uk": {
+    "language": "Мова",
+    "portfolio": "Портфоліо",
+    "timeline": "Хронологія",
+    "contact": "Контакти",
+    "blog": "Блог"
+  },
+  "en": {
+   "language": "Language",
+   "portfolio": "Portfolio",
+   "timeline": "Timeline",
+   "contact": "Contacts",
+   "blog": "Blog"
+  },
+  "ru": {
+    "language": "язык",
+    "portfolio": "Портфолио",
+    "timeline": "График",
+     "contact": "Контакты",
+     "blog": "Блог"
+  }
+}
+</i18n>
+
 <template>
   <div id="headerComponent">
     <b-navbar
@@ -9,7 +35,7 @@
       <div class="container">
         <b-navbar-brand
           class="font-family-headings"
-          to="/"
+          :to="localePath({name: 'index'},$i18n.locale)"
         >NeniEmSu</b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -22,23 +48,32 @@
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
 
-            <b-nav-item href="#">Portfolio</b-nav-item>
+            <b-nav-item :to="localePath({name: 'portfolio'},$i18n.locale)">{{$t('portfolio')}}</b-nav-item>
 
             <b-nav-item
               href="#"
               disabled
-            >Timeline</b-nav-item>
-            <b-nav-item href="#">Contact</b-nav-item>
+            >{{$t('timeline')}}</b-nav-item>
+            <b-nav-item :to="localePath({name: 'index'},$i18n.locale)">{{$t('contact')}}</b-nav-item>
 
-            <b-nav-item to="blog">Blog</b-nav-item>
+            <b-nav-item :to="localePath({name: 'blog'},$i18n.locale)">{{$t('blog')}}</b-nav-item>
 
             <b-nav-item-dropdown
-              text="Language"
+              :text="$t('language')"
               right
             >
-              <b-dropdown-item href="#">EN</b-dropdown-item>
-              <b-dropdown-item href="#">Uk</b-dropdown-item>
-              <b-dropdown-item href="#">RU</b-dropdown-item>
+              <b-dropdown-item
+                v-if="$i18n.locale !== 'en'"
+                :to="switchLocalePath('en')"
+              >English</b-dropdown-item>
+              <b-dropdown-item
+                v-if="$i18n.locale !== 'uk'"
+                :to="switchLocalePath('uk')"
+              >Українська</b-dropdown-item>
+              <b-dropdown-item
+                v-if="$i18n.locale !== 'ru'"
+                :to="switchLocalePath('ru')"
+              >Русский</b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>

@@ -17,13 +17,11 @@
           >
             <tilt
               class="cols"
-              max=30
-              perspective=500
+              :max=30
+              :perspective=500
+              :reverse="true"
             >
-              <a
-                href="#"
-                class="tilter tilter--2"
-              >
+              <a class="tilter tilter--2">
                 <figure class="tilter__figure">
                   <img
                     class="tilter__image"
@@ -57,7 +55,7 @@
               data-aos="fade"
             >
               <h2>About Me.</h2>
-              <span>Mostly Full-Stack Web Developer 🏗️</span>
+              <span>Definitely Front-End Web Developer</span>
             </div>
             <p data-aos="fade-up">I'm <b>Neni Emmanuel</b> a Med student studying at Ternopil state medical university by Day and a Mostly full-stack web developer by night.</p>
             <p data-aos="fade-up">I started to code with a Html and Css book a lifetime ago and resently needed an exchange to change bitcoin for the local currency but found none so, i decided to build one. Still underconstruction by the way. So i code to <span class="text-primary">Solve proplems.</span></p>

@@ -96,9 +96,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bg-gray {
-  background-color: #f2f2f2;
-}
 .pb-50 {
   padding-bottom: 50px !important;
 }
