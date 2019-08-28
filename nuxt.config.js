@@ -25,20 +25,18 @@ export default {
     }, {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css?family=Corben:400,700|Muli|Nobile:400i,500|Roboto:300,400,500,700,900&display=swap'
-    }, {
-      rel: 'stylesheet',
-      href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
-    }]
+    }],
+    script: [{
+      src: 'https://kit.fontawesome.com/41fc25a21c.js'
+    }],
   },
-  /*
-   ** Customize the progress-bar color
-   */
+
   loading: {
     color: '#fff'
   },
-  /*
-   ** Global CSS
-   */
+
+
+
   css: ['@/assets/css/normalize.css',
     'aos/dist/aos.css',
     '@/assets/scss/styles.scss'

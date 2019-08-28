@@ -33,13 +33,17 @@
               href="https://github.com/cryptodoct0r"
               target="_blank"
               rel="no-referal"
-            ><i class="fa fa-github"></i></a>
+            ><i class="fab fa-github"></i></a>
             <a
               href="https://twitter.com/NeniEmmanuel"
               target="_blank"
               rel="no-referal"
-            ><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-dribbble"></i></a>
+            ><i class="fab fa-twitter"></i></a>
+            <a
+              href="https://www.linkedin.com/in/emmanuel-neni-a67060152/"
+              target="_blank"
+              rel="no-referal"
+            ><i class="fab fa-linkedin-in"></i></a>
 
           </div>
         </div>

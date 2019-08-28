@@ -55,6 +55,7 @@
               data-aos="fade"
             >
               <h2>About Me.</h2>
+
               <span>Definitely Front-End Web Developer</span>
             </div>
             <p data-aos="fade-up">I'm <b>Neni Emmanuel</b> a Med student studying at Ternopil state medical university by Day and a Mostly full-stack web developer by night.</p>
@@ -83,17 +84,22 @@ section.about .about-img {
   position: relative;
 }
 
-// section.about .about-img img {
-//   position: relative;
-//   width: 100%;
-//   z-index: 1;
-//   -webkit-box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
-//   box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
-// }
-// img {
-//   width: 100%;
-//   height: auto;
-// }
+section.about .about-img img {
+  -webkit-box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.14);
+}
+
+.section-title:before {
+  width: 40px;
+  height: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #568203;
+  transform: translateX(-50%);
+}
+
 img {
   vertical-align: middle;
   border-style: none;

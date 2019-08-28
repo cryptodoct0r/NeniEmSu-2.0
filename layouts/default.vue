@@ -54,7 +54,7 @@ export default {
 body {
   margin: 0;
   height: 100vh;
-  cursor: url("~assets/img/transparent-cursor.png"), default;
+  cursor: url("~assets/img/circle-cursor.png"), default;
   // background: #ce8243;
   // background: #d8d881;
   // background: #0a0a0a;
@@ -64,6 +64,20 @@ body {
   color: #484848;
   overflow-x: hidden;
 }
+
+* {
+  // cursor: url(~assets/img/circle-cursor.png), auto !important;
+}
+// *:hover {
+//   outline: none;
+
+//   cursor: -webkit-image-set(
+//         url(~assets/img/circle-cursor.png) 1x,
+//         url(~assets/img/circle-cursorx2.png) 2x
+//       )
+//       0 0,
+//     default !important;
+// }
 
 p {
   margin-top: 20px;

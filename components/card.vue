@@ -26,10 +26,6 @@
   overflow: hidden;
 }
 
-body {
-  background-color: #f4f4f7;
-}
-
 .card-test {
   width: 450px;
   height: 280px;
