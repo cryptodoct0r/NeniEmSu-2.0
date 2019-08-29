@@ -5,18 +5,63 @@
     </div>
 
     <TheHeader />
+
+    <div>
+      <b-button
+        class="fixed-bottom"
+        v-b-modal.modal-1
+        @click="showJoke"
+      ><i class="fas fa-grin-squint-tears"></i>Joke</b-button>
+
+      <b-modal
+        hide-footer
+        id="modal-1"
+        title="Dad Jokes"
+      >
+        <p v-if="loading">loading...</p>
+
+        <div v-if="joke">
+          <p>{{joke}}</p>
+        </div>
+      </b-modal>
+    </div>
     <nuxt />
 
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import TheHeader from "~/components/TheHeader"
 export default {
 
   components: {
     TheHeader
-  }
+  },
+
+  data () {
+    return {
+      joke: '',
+      loading: false
+    }
+  },
+
+  methods: {
+    async showJoke () {
+      this.loading = true
+      let config = {
+        headers: {
+          'Accept': 'application/json'
+        }
+      }
+      const joke = await axios.get('https://icanhazdadjoke.com/', config)
+      this.loading = false
+      this.joke = joke.data.joke
+    }
+  },
+
+
+
 
 }
 </script>
@@ -39,7 +84,8 @@ body {
 a,
 button,
 .nuxt-link,
-.btn {
+.btn,
+.chevron-container {
   &:hover {
     cursor: url("~assets/img/circle-cursorx2.png"), auto;
   }
@@ -113,6 +159,7 @@ p {
 }
 
 ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #f6f6f6;
@@ -125,6 +172,7 @@ p {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: $primary;
 }
