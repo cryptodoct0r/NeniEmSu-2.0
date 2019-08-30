@@ -1,9 +1,12 @@
 <template>
   <section class="workSection container">
 
-    <h2 class="mb-5">My Top Projects</h2>
+    <h2 class="mb-5 mx-auto text-center">My Top Projects</h2>
 
-    <div class="work clearfix">
+    <div
+      class="work clearfix"
+      data-aos="fade-up"
+    >
       <div class="workText">
         <h3>NeniEmSu</h3>
         <a href="#">
@@ -13,18 +16,12 @@
 
       </div>
       <ul>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribbble icon"
-            ></a></li>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribbble icon"
-            ></a></li>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribble icon"
-            ></a></li>
+        <li><a href="#"><i class="fas fa-link fa-2x"></i></a></li>
+        <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+        <li
+          v-b-tooltip.hover
+          title="Next Project"
+        ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
       </ul>
       <img
         src="~/assets/img/neniemsu.png"
@@ -33,7 +30,10 @@
       >
     </div>
 
-    <div class="work2 clearfix">
+    <div
+      class="work2 clearfix"
+      data-aos="fade-up"
+    >
       <div class="workText">
         <h3>NeniEmSu</h3>
         <a href="#">
@@ -43,18 +43,12 @@
 
       </div>
       <ul>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribbble icon"
-            ></a></li>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribbble icon"
-            ></a></li>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribble icon"
-            ></a></li>
+        <li><a href="#"><i class="fas fa-link fa-2x"></i></a></li>
+        <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+        <li
+          v-b-tooltip.hover
+          title="Next Project"
+        ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
       </ul>
       <img
         src="~/assets/img/test.image.png"
@@ -63,7 +57,10 @@
       >
     </div>
 
-    <div class="work clearfix">
+    <div
+      class="work clearfix"
+      data-aos="fade-up"
+    >
       <div class="workText">
         <h3>Nugs-Ternopil</h3>
         <a href="#">
@@ -73,18 +70,12 @@
 
       </div>
       <ul>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribbble icon"
-            ></a></li>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribbble icon"
-            ></a></li>
-        <li><a href="#"><img
-              src="~/assets/img/Dribbble_Black.png"
-              alt="dribble icon"
-            ></a></li>
+        <li><a href="#"><i class="fas fa-link fa-2x"></i></a></li>
+        <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+        <li
+          v-b-tooltip.hover
+          title="See More"
+        ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
       </ul>
       <img
         src="~/assets/img/nugshdark.png"
@@ -120,7 +111,7 @@ a {
 .work {
   width: 100%;
   position: relative;
-  margin-bottom: 20em;
+  margin-bottom: 5em;
 }
 
 .work > .workText {
@@ -157,7 +148,7 @@ a {
 .work2 {
   width: 100%;
   position: relative;
-  margin-bottom: 20em;
+  margin-bottom: 5em;
 }
 
 .work2 > .workText {
@@ -187,7 +178,7 @@ a {
 .work2 ul {
   position: absolute;
   bottom: 0;
-  left: 86%;
+  left: 82%;
 }
 
 .work2 ul li {

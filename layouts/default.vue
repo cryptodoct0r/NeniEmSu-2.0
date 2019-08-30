@@ -6,12 +6,13 @@
 
     <TheHeader />
 
-    <div>
+    <div data-aos="fade">
       <b-button
-        class="fixed-bottom"
+        class="fixed-bottom laugh-icon"
+        variant="primary"
         v-b-modal.modal-1
         @click="showJoke"
-      ><i class="fas fa-grin-squint-tears"></i>Joke</b-button>
+      ><i class="fas fa-grin-squint-tears fa-2x"></i></b-button>
 
       <b-modal
         hide-footer
@@ -27,16 +28,20 @@
     </div>
     <nuxt />
 
+    <TheFooter />
+
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import TheHeader from "~/components/TheHeader"
+import TheFooter from "~/components/TheFooter"
 export default {
 
   components: {
-    TheHeader
+    TheHeader,
+    TheFooter
   },
 
   data () {
@@ -79,6 +84,14 @@ body {
 
   color: #484848;
   overflow-x: hidden;
+}
+
+.laugh-icon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0 !important;
+  margin: 0 0 20px 10px;
 }
 
 a,
