@@ -54,7 +54,7 @@
 
     <div class="chevron-container mx-auto">
       <nuxt-link
-        to="#"
+        :to="localePath({name: 'index'},$i18n.locale)"
         v-scroll-to="'#about'"
       >
         <div class="chevron"></div>
