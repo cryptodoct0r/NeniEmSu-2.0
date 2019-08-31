@@ -30,7 +30,6 @@
       toggleable="lg"
       fixed="top"
       type="dark"
-      data-aos="fade-down"
     >
       <div class="container">
         <b-navbar-brand
@@ -122,7 +121,8 @@ nav.navbar {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 
-  background-color: rgba(34, 34, 34, 0.8);
+  // background-color: rgba(34, 34, 34, 0.8);
+  background-color: rgba(49, 56, 64, 0.8);
 }
 
 nav.navbar .navbar-toggler,

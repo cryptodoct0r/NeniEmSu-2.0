@@ -54,7 +54,7 @@
 
     <div class="chevron-container mx-auto">
       <nuxt-link
-        to="#about"
+        to="#"
         v-scroll-to="'#about'"
       >
         <div class="chevron"></div>

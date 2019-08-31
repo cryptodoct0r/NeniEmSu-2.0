@@ -1,6 +1,6 @@
 <template>
 
-  <footer id="contact">
+  <footer id="contacts">
     <div class="container">
       <form
         id="form-box"
