@@ -8,8 +8,17 @@
 <script>
 // import card from "~/components/card"
 export default {
+  scrollToTop: true,
   components: {
 
+  },
+  head () {
+    return {
+      title: 'Portfolio - NeniEmsu',
+      meta: [
+        { hid: 'robots', name: 'robots', content: 'index' }
+      ]
+    }
   }
 
 }

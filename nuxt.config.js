@@ -51,7 +51,8 @@ export default {
     {
       src: '~/plugins/cursor.js',
       mode: 'client'
-    }
+    },
+    // { src: '~/plugins/vue-scroll-reveal', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -134,6 +135,19 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/netlify-files',
     '@nuxtjs/style-resources',
+    ['vue-scrollto/nuxt', {
+      container: "body",
+      duration: 500,
+      easing: "ease-in-out",
+      offset: 0,
+      force: true,
+      cancelable: true,
+      onStart: false,
+      onDone: false,
+      onCancel: false,
+      x: false,
+      y: true
+    }],
     ['nuxt-i18n', {
       seo: true,
       baseUrl: 'https://barbaresco.netlify.com',

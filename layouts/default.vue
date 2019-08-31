@@ -12,6 +12,8 @@
         variant="primary"
         v-b-modal.modal-1
         @click="showJoke"
+        v-b-tooltip.hover
+        title="Get a joke"
       ><i class="fas fa-grin-squint-tears fa-2x"></i></b-button>
 
       <b-modal

@@ -23,11 +23,13 @@
           title="Next Project"
         ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
       </ul>
-      <img
+      <b-img-lazy
         src="~/assets/img/neniemsu.png"
         alt="project img"
         class="workImg"
       >
+      </b-img-lazy>
+
     </div>
 
     <div
@@ -50,11 +52,13 @@
           title="Next Project"
         ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
       </ul>
-      <img
+      <b-img-lazy
         src="~/assets/img/test.image.png"
         alt="project img"
         class="workImg"
       >
+      </b-img-lazy>
+
     </div>
 
     <div
@@ -75,13 +79,17 @@
         <li
           v-b-tooltip.hover
           title="See More"
-        ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
+        >
+          <nuxt-link :to="localePath({name: 'portfolio'},$i18n.locale)"><i class="fas fa-forward fa-2x"></i></nuxt-link>
+        </li>
       </ul>
-      <img
+      <b-img-lazy
+        to="#"
         src="~/assets/img/nugshdark.png"
         alt="project img"
         class="workImg"
       >
+      </b-img-lazy>
     </div>
   </section>
 </template>

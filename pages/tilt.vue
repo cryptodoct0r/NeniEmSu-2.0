@@ -63,27 +63,28 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
 
 
-.grid
-  display: flex
-  max-width: 800px
-  margin: auto
-  overflow: hidden
+<style lang="scss" scoped>
+.grid {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
 
-.cols
-  width: 50%
-  margin: 30px
+.cols {
+  width: 50%;
+  margin: 30px;
+}
 
-img
-  max-width: 100%
-  object-fit: cover
-  height: auto
-  display: block
-</style>
+img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+  display: block;
+}
 
-<style scoped>
 .tilter {
   position: relative;
   display: block;

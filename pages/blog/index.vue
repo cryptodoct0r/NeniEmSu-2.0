@@ -527,7 +527,14 @@
 
 <script>
 export default {
-
+  head () {
+    return {
+      title: 'Blog - NeniEmsu',
+      meta: [
+        { hid: 'robots', name: 'robots', content: 'index' }
+      ]
+    }
+  }
 }
 </script>
 

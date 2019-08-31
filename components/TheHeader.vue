@@ -54,7 +54,10 @@
               href="#"
               disabled
             >{{$t('timeline')}}</b-nav-item>
-            <b-nav-item :to="localePath({name: 'index'},$i18n.locale)">{{$t('contact')}}</b-nav-item>
+            <b-nav-item
+              to="#contact"
+              v-scroll-to="'#contacts'"
+            >{{$t('contact')}}</b-nav-item>
 
             <b-nav-item :to="localePath({name: 'blog'},$i18n.locale)">{{$t('blog')}}</b-nav-item>
 

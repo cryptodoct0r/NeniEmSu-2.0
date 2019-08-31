@@ -1,6 +1,7 @@
 <template>
 
   <section
+    id="about"
     class="about pt-100 pb-100"
     data-scroll-index="1"
   >

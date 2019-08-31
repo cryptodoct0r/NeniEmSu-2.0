@@ -51,13 +51,19 @@
       </div>
 
     </div>
-    <div class="chevron-container mx-auto">
-      <div class="chevron"></div>
-      <div class="chevron"></div>
-      <div class="chevron"></div>
-      <span class="text">Scroll down</span>
 
+    <div class="chevron-container mx-auto">
+      <nuxt-link
+        to="#about"
+        v-scroll-to="'#about'"
+      >
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <span class="text">Scroll down</span>
+      </nuxt-link>
     </div>
+
     <div class="waveWrapperInner bgTop">
       <div
         class="wave waveTop"
@@ -253,7 +259,6 @@ a:focus {
   width: 24px;
   height: 24px;
 
-  cursor: pointer;
   top: 60vh;
   z-index: 16;
 }
@@ -266,7 +271,7 @@ a:focus {
   transform: scale3d(0.5, 0.5, 0.5);
   animation: move 3s ease-out infinite;
 
-  cursor: pointer;
+  z-index: 100;
 }
 
 .chevron:first-child {
