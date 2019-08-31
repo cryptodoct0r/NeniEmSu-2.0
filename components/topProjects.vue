@@ -129,7 +129,7 @@ a {
 
 .work > .workText > .underline {
   display: block;
-  background-color: #027bff;
+  background-color: $primary;
   height: 3px;
   width: 61px;
   margin-top: 5px;
@@ -168,7 +168,7 @@ a {
 
 .work2 > .workText > .underline {
   display: block;
-  background-color: #027bff;
+  background-color: $primary;
   height: 3px;
   width: 61px;
   margin-top: 5px;
