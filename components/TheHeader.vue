@@ -35,7 +35,12 @@
         <b-navbar-brand
           class="font-family-headings"
           :to="localePath({name: 'index'},$i18n.locale)"
-        >NeniEmSu</b-navbar-brand>
+        >
+          <b-img-lazy
+            src="~/assets/img/neniemsu-logo.svg"
+            class="img-fluid"
+          ></b-img-lazy>
+        </b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

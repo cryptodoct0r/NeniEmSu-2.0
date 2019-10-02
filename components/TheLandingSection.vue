@@ -195,7 +195,7 @@ q {
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 90vh;
+  height: 95vh;
   width: 100vw;
 }
 

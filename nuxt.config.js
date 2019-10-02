@@ -1,3 +1,9 @@
+const builtAt = new Date().toISOString()
+const path = require('path')
+
+import blogsEn from './contents/en/blogsEn.js'
+import blogsUk from './contents/uk/blogsUk.js'
+
 export default {
   mode: 'universal',
   /*
@@ -16,12 +22,32 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        name: 'robots',
+        content: 'index, follow'
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        name: 'twitter:site',
+        content: '@NeniEmmanuel'
+      },
+      {
+        property: 'og:type',
+        content: 'profile'
+      },
+      {
+        property: 'og:updated_time',
+        content: builtAt
       }
     ],
     link: [{
       rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
+      type: 'image/png',
+      href: '/icon.png'
     }, {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css?family=Corben:400,700|Muli|Nobile:400i,500|Roboto:300,400,500,700,900&display=swap'
@@ -31,15 +57,34 @@ export default {
     }],
   },
 
+
+  manifest: {
+    name: 'Neni Emmanuel',
+    short_name: 'NeniEmsu',
+    description: 'Top restaurants in ternopil in one place.',
+    theme_color: '#000000',
+    background_color: '#0A0A0A',
+    display: 'standalone',
+    start_url: '/',
+    dir: 'auto',
+    lang: 'en',
+    icons: [{
+      src: '/icon.png',
+      sizes: '512x512',
+      type: 'image/png'
+    }],
+    categories: ['blog', 'portfolio']
+  },
+
   loading: {
     color: '#fff'
   },
 
 
 
-  css: ['@/assets/css/normalize.css',
+  css: ['normalize.css/normalize.css',
     'aos/dist/aos.css',
-    '@/assets/scss/styles.scss'
+    '@/assets/scss/styles.scss',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -52,6 +97,7 @@ export default {
       src: '~/plugins/cursor.js',
       mode: 'client'
     },
+    '~/plugins/lazyload', '~/plugins/globalComponents',
     // { src: '~/plugins/vue-scroll-reveal', mode: 'client' }
   ],
   /*
@@ -128,9 +174,9 @@ export default {
   },
 
   modules: [
-
+    'nuxt-rfg-icon',
+    '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
-
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/netlify-files',
@@ -187,18 +233,48 @@ export default {
       '~/assets/scss/_config.scss'
     ]
   },
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
+
+  generate: {
+    routes: [
+        '/uk', '404'
+      ]
+      .concat(blogsEn.map(w => `/blog/${w}`))
+      .concat(blogsUk.map(w => `uk/blog/${w}`))
+  },
+
   axios: {},
-  /*
-   ** Build configuration
-   */
+
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
+    extend(config) {
+      const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/i')
+      config.module.rules.splice(config.module.rules.indexOf(rule), 1)
+
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+        include: path.resolve(__dirname, 'contents'),
+        options: {
+          vue: {
+            root: "dynamicMarkdown"
+          }
+        }
+      }, {
+        test: /\.(jpe?g|png)$/i,
+        loader: 'responsive-loader',
+        options: {
+          placeholder: true,
+          quality: 60,
+          size: 1400,
+          adapter: require('responsive-loader/sharp')
+        }
+      }, {
+        test: /\.(gif|svg)$/,
+        loader: 'url-loader',
+        query: {
+          limit: 1000,
+          name: 'img/[name].[hash:7].[ext]'
+        }
+      });
+    }
   }
-}
+};

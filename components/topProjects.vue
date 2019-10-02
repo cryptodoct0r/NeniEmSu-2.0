@@ -23,12 +23,11 @@
           title="Next Project"
         ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
       </ul>
-      <b-img-lazy
+      <img
         src="~/assets/img/neniemsu.png"
         alt="project img"
         class="workImg"
       >
-      </b-img-lazy>
 
     </div>
 
@@ -52,12 +51,11 @@
           title="Next Project"
         ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
       </ul>
-      <b-img-lazy
+      <img
         src="~/assets/img/test.image.png"
         alt="project img"
         class="workImg"
       >
-      </b-img-lazy>
 
     </div>
 
@@ -83,13 +81,13 @@
           <nuxt-link :to="localePath({name: 'portfolio'},$i18n.locale)"><i class="fas fa-forward fa-2x"></i></nuxt-link>
         </li>
       </ul>
-      <b-img-lazy
+      <img
         to="#"
         src="~/assets/img/nugshdark.png"
         alt="project img"
         class="workImg"
       >
-      </b-img-lazy>
+
     </div>
   </section>
 </template>
@@ -191,6 +189,42 @@ a {
 
 .work2 ul li {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 425px) {
+  .work > .workText {
+    position: absolute;
+    top: 20px;
+    background: rgba(228, 230, 222, 0.25);
+  }
+
+  .work2 > .workText {
+    position: absolute;
+    top: 20px;
+    background: rgba(228, 230, 222, 0.25);
+  }
+
+  .work ul {
+    display: flex;
+    right: 50%;
+    background: rgba(228, 230, 222, 0.25);
+  }
+
+  .work ul li {
+    margin: 0 10px 0;
+    display: flex;
+  }
+
+  .work2 ul {
+    display: flex;
+    left: 50%;
+    background: rgba(228, 230, 222, 0.25);
+  }
+
+  .work2 ul li {
+    margin: 0 10px 0;
+    display: flex;
+  }
 }
 </style>
 

@@ -1,16 +1,18 @@
 <template>
   <div style="margin-top: 100px">
-    <h1>Portfolio</h1>
+    <h1 class="pt-5 text-center">Portfolio</h1>
+
+    <topProject />
 
   </div>
 </template>
 
 <script>
-// import card from "~/components/card"
+import topProject from '~/components/topProjects.vue'
 export default {
   scrollToTop: true,
   components: {
-
+    topProject
   },
   head () {
     return {
