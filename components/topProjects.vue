@@ -218,7 +218,7 @@ a {
 
   .work2 ul {
     display: flex;
-    left: 50%;
+    left: 35%;
     background: rgba(228, 230, 222, 0.25);
   }
 
