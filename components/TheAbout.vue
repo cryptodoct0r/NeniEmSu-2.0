@@ -1,5 +1,4 @@
 <template>
-
   <section
     id="about"
     class="about pt-100 pb-100"
@@ -18,8 +17,8 @@
           >
             <tilt
               class="cols"
-              :max=30
-              :perspective=500
+              :max="30"
+              :perspective="500"
               :reverse="true"
             >
               <nuxt-link
@@ -31,14 +30,18 @@
                     class="tilter__image"
                     src="~/assets/img/neniEmsu.jpg"
                     alt="img03"
-                  />
+                  >
                   <div class="tilter__deco tilter__deco--shine">
-                    <div></div>
+                    <div />
                   </div>
-                  <div class="tilter__deco tilter__deco--overlay"></div>
+                  <div class="tilter__deco tilter__deco--overlay" />
                   <figcaption class="tilter__caption">
-                    <h3 class="tilter__title">Neni Emmanuel</h3>
-                    <p class="tilter__description">Mostly Full-Stack Dev 🏗️</p>
+                    <h3 class="tilter__title">
+                      Neni Emmanuel
+                    </h3>
+                    <p class="tilter__description">
+                      Mostly Full-Stack Dev 🏗️
+                    </p>
                   </figcaption>
                   <svg
                     class="tilter__deco tilter__deco--lines"
@@ -62,15 +65,17 @@
 
               <span>Definitely Front-End Web Developer</span>
             </div>
-            <p data-aos="fade-up">I'm <b>Neni Emmanuel</b> a Med student studying at Ternopil state medical university by Day and a Mostly full-stack web developer by night.</p>
-            <p data-aos="fade-up">I started to code with a Html and Css book a lifetime ago and resently needed an exchange to change bitcoin for the local currency but found none so, i decided to build one. Still underconstruction by the way. So i code to <span class="text-primary">Solve proplems.</span></p>
-
+            <p data-aos="fade-up">
+              I'm <b>Neni Emmanuel</b> a Med student studying at Ternopil state medical university by Day and a Mostly full-stack web developer by night.
+            </p>
+            <p data-aos="fade-up">
+              I started to code with a Html and Css book a lifetime ago and resently needed an exchange to change bitcoin for the local currency but found none so, i decided to build one. Still underconstruction by the way. So i code to <span class="text-primary">Solve proplems.</span>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -81,7 +86,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss" scoped>
 section.about .about-img {
@@ -225,4 +229,3 @@ img {
   letter-spacing: 0.15em;
 }
 </style>
-

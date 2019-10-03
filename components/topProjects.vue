@@ -1,7 +1,8 @@
 <template>
   <section class="workSection container">
-
-    <h2 class="mb-5 mx-auto text-center">My Top Projects</h2>
+    <h2 class="mb-5 mx-auto text-center">
+      My Top Projects
+    </h2>
 
     <div
       class="work clearfix"
@@ -12,23 +13,23 @@
         <a href="#">
           <h5>View Project</h5>
         </a>
-        <div class="underline"></div>
-
+        <div class="underline" />
       </div>
       <ul>
-        <li><a href="#"><i class="fas fa-link fa-2x"></i></a></li>
-        <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+        <li><a href="#"><i class="fas fa-link fa-2x" /></a></li>
+        <li><a href="#"><i class="fab fa-github fa-2x" /></a></li>
         <li
           v-b-tooltip.hover
           title="Next Project"
-        ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
+        >
+          <a href="#"><i class="fas fa-forward fa-2x" /></a>
+        </li>
       </ul>
       <img
         src="~/assets/img/neniemsu.png"
         alt="project img"
         class="workImg"
       >
-
     </div>
 
     <div
@@ -40,23 +41,23 @@
         <a href="#">
           <h5>View Project</h5>
         </a>
-        <div class="underline"></div>
-
+        <div class="underline" />
       </div>
       <ul>
-        <li><a href="#"><i class="fas fa-link fa-2x"></i></a></li>
-        <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+        <li><a href="#"><i class="fas fa-link fa-2x" /></a></li>
+        <li><a href="#"><i class="fab fa-github fa-2x" /></a></li>
         <li
           v-b-tooltip.hover
           title="Next Project"
-        ><a href="#"><i class="fas fa-forward fa-2x"></i></a></li>
+        >
+          <a href="#"><i class="fas fa-forward fa-2x" /></a>
+        </li>
       </ul>
       <img
         src="~/assets/img/test.image.png"
         alt="project img"
         class="workImg"
       >
-
     </div>
 
     <div
@@ -68,17 +69,18 @@
         <a href="#">
           <h5>View Project</h5>
         </a>
-        <div class="underline"></div>
-
+        <div class="underline" />
       </div>
       <ul>
-        <li><a href="#"><i class="fas fa-link fa-2x"></i></a></li>
-        <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+        <li><a href="#"><i class="fas fa-link fa-2x" /></a></li>
+        <li><a href="#"><i class="fab fa-github fa-2x" /></a></li>
         <li
           v-b-tooltip.hover
           title="See More"
         >
-          <nuxt-link :to="localePath({name: 'portfolio'},$i18n.locale)"><i class="fas fa-forward fa-2x"></i></nuxt-link>
+          <nuxt-link :to="localePath({name: 'portfolio'},$i18n.locale)">
+            <i class="fas fa-forward fa-2x" />
+          </nuxt-link>
         </li>
       </ul>
       <img
@@ -87,7 +89,6 @@
         alt="project img"
         class="workImg"
       >
-
     </div>
   </section>
 </template>
@@ -227,4 +228,3 @@ a {
   }
 }
 </style>
-

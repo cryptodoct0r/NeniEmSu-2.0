@@ -1,5 +1,4 @@
 <template>
-
   <section class="jumbotron">
     <div class="container">
       <div>
@@ -18,7 +17,7 @@
             >
               <div class="skills-wrapper">
                 <div class="skills-image text-center">
-                  <i class="fas fa-laptop-code fa-3x"></i>
+                  <i class="fas fa-laptop-code fa-3x" />
                 </div>
                 <div class="skills-detail text-center">
                   <h5>Cores</h5>
@@ -32,7 +31,7 @@
             >
               <div class="skills-wrapper">
                 <div class="skills-image text-center">
-                  <i class="fab fa-vuejs fa-3x"></i>
+                  <i class="fab fa-vuejs fa-3x" />
                 </div>
                 <div class="skills-detail text-center">
                   <h5>Libraries</h5>
@@ -46,7 +45,7 @@
             >
               <div class="skills-wrapper">
                 <div class="skills-image text-center">
-                  <i class="fas fa-tools fa-3x"></i>
+                  <i class="fas fa-tools fa-3x" />
                 </div>
                 <div class="skills-detail text-center">
                   <h5>Dev-Tools</h5>
@@ -60,7 +59,7 @@
             >
               <div class="skills-wrapper">
                 <div class="skills-image text-center">
-                  <i class="fab fa-figma fa-3x"></i>
+                  <i class="fab fa-figma fa-3x" />
                 </div>
                 <div class="skills-detail text-center">
                   <h5>Design Tools</h5>
@@ -74,7 +73,7 @@
             >
               <div class="skills-wrapper">
                 <div class="skills-image text-center">
-                  <i class="fas fa-broom fa-3x"></i>
+                  <i class="fas fa-broom fa-3x" />
                 </div>
                 <div class="skills-detail text-center">
                   <h5>Testing & Debugging</h5>
@@ -88,7 +87,7 @@
             >
               <div class="skills-wrapper">
                 <div class="skills-image text-center">
-                  <i class="fas fa-language fa-3x"></i>
+                  <i class="fas fa-language fa-3x" />
                 </div>
                 <div class="skills-detail text-center">
                   <h5>Spoken Languages</h5>
@@ -101,7 +100,6 @@
       </div>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -128,5 +126,3 @@ i {
   opacity: 0.9;
 }
 </style>
-
-

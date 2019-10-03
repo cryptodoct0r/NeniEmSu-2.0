@@ -11,7 +11,9 @@
           data-aos="fade-right"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
-        >Neni Emmanuel</h1>
+        >
+          Neni Emmanuel
+        </h1>
         <div
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
@@ -21,45 +23,43 @@
             <span>FullStack developer &amp; Medical student!</span><br>
             <q>The Way To Get Started Is To Quit Talking And Begin Doing.</q><br>
             <span class="author">Walt Disney</span>
-
           </p>
 
           <div class="social-icons">
             <b-button
               variant="dark"
               class="btn read-more border-0 btn-primary"
-            >Download Cv</b-button>
+            >
+              Download Cv
+            </b-button>
             <a
               href="https://github.com/cryptodoct0r"
               target="_blank"
               rel="no-referal"
-            ><i class="fab fa-github"></i></a>
+            ><i class="fab fa-github" /></a>
             <a
               href="https://twitter.com/NeniEmmanuel"
               target="_blank"
               rel="no-referal"
-            ><i class="fab fa-twitter"></i></a>
+            ><i class="fab fa-twitter" /></a>
             <a
               href="https://www.linkedin.com/in/emmanuel-neni-a67060152/"
               target="_blank"
               rel="no-referal"
-            ><i class="fab fa-linkedin-in"></i></a>
-
+            ><i class="fab fa-linkedin-in" /></a>
           </div>
         </div>
-
       </div>
-
     </div>
 
     <div class="chevron-container mx-auto">
       <nuxt-link
-        :to="localePath({name: 'index'},$i18n.locale)"
         v-scroll-to="'#about'"
+        :to="localePath({name: 'index'},$i18n.locale)"
       >
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
+        <div class="chevron" />
+        <div class="chevron" />
+        <div class="chevron" />
         <span class="text">Scroll down</span>
       </nuxt-link>
     </div>
@@ -68,33 +68,30 @@
       <div
         class="wave waveTop"
         style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"
-      ></div>
+      />
     </div>
     <div class="waveWrapperInner bgMiddle">
       <div
         class="wave waveMiddle"
         style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"
-      ></div>
+      />
     </div>
     <div class="waveWrapperInner bgBottom">
       <div
         class="wave waveBottom"
         style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"
-      ></div>
+      />
     </div>
   </section>
-
 </template>
 
-
 <script>
-import axios from 'axios'
 export default {
   data () {
     return {
 
     }
-  },
+  }
 }
 </script>
 

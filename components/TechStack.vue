@@ -1,5 +1,4 @@
 <template>
-
   <section
     class="jumbotron pt-100 pb-50"
     data-scroll-index="2"
@@ -11,7 +10,9 @@
             <h2
               data-aos="fade"
               class="mb-3"
-            >Technologies i currently use</h2>
+            >
+              Technologies i currently use
+            </h2>
           </div>
         </div>
       </div>
@@ -82,11 +83,9 @@
             </b-card>
           </b-card-group>
         </div>
-
       </div>
     </div>
   </section>
-
 </template>
 
 <script>

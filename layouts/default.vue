@@ -1,44 +1,47 @@
 <template>
   <div>
-    <div class="cursor">
-
-    </div>
+    <div class="cursor" />
 
     <TheHeader />
 
     <div data-aos="fade">
       <b-button
+        v-b-modal.modal-1
+        v-b-tooltip.hover
         class="fixed-bottom laugh-icon"
         variant="primary"
-        v-b-modal.modal-1
-        @click="showJoke"
-        v-b-tooltip.hover
         title="Get a joke"
-      ><i class="fas fa-grin-squint-tears fa-2x"></i></b-button>
+        @click="showJoke"
+      >
+        <i class="fas fa-grin-squint-tears fa-2x" />
+      </b-button>
 
       <b-modal
-        hide-footer
         id="modal-1"
+        hide-footer
         title="Dad Jokes"
       >
-        <p v-if="loading">loading...</p>
+        <p v-if="loading">
+          loading...
+        </p>
 
         <div v-if="joke">
-          <p>{{joke}}</p>
+          <p>{{ joke }}</p>
         </div>
       </b-modal>
     </div>
-    <nuxt />
+    <vue-page-transition :name="$store.state.animation">
+      <nuxt />
+    </vue-page-transition>
 
     <TheFooter />
-
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import TheHeader from "~/components/TheHeader"
-import TheFooter from "~/components/TheFooter"
+import TheHeader from '~/components/TheHeader'
+import TheFooter from '~/components/TheFooter'
 export default {
 
   components: {
@@ -56,7 +59,7 @@ export default {
   methods: {
     async showJoke () {
       this.loading = true
-      let config = {
+      const config = {
         headers: {
           'Accept': 'application/json'
         }
@@ -65,10 +68,7 @@ export default {
       this.loading = false
       this.joke = joke.data.joke
     }
-  },
-
-
-
+  }
 
 }
 </script>

@@ -1,8 +1,4 @@
 const builtAt = new Date().toISOString()
-const path = require('path')
-
-import blogsEn from './contents/en/blogsEn.js'
-import blogsUk from './contents/uk/blogsUk.js'
 
 export default {
   mode: 'universal',
@@ -12,37 +8,37 @@ export default {
   head: {
     title: process.env.npm_package_name || '',
     meta: [{
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      },
-      {
-        name: 'robots',
-        content: 'index, follow'
-      },
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      {
-        name: 'twitter:site',
-        content: '@NeniEmmanuel'
-      },
-      {
-        property: 'og:type',
-        content: 'profile'
-      },
-      {
-        property: 'og:updated_time',
-        content: builtAt
-      }
+      charset: 'utf-8'
+    },
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1'
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content: process.env.npm_package_description || ''
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:site',
+      content: '@NeniEmmanuel'
+    },
+    {
+      property: 'og:type',
+      content: 'profile'
+    },
+    {
+      property: 'og:updated_time',
+      content: builtAt
+    }
     ],
     link: [{
       rel: 'icon',
@@ -54,9 +50,8 @@ export default {
     }],
     script: [{
       src: 'https://kit.fontawesome.com/41fc25a21c.js'
-    }],
+    }]
   },
-
 
   manifest: {
     name: 'Neni Emmanuel',
@@ -73,32 +68,39 @@ export default {
       sizes: '512x512',
       type: 'image/png'
     }],
-    categories: ['blog', 'portfolio']
+    categories: ['blog', 'productivity', 'education', 'portfolio']
   },
 
   loading: {
     color: '#fff'
   },
 
-
+  router: {
+    middleware: [
+      'animation'
+    ]
+  },
 
   css: ['normalize.css/normalize.css',
     'aos/dist/aos.css',
-    '@/assets/scss/styles.scss',
+    '@/assets/scss/styles.scss'
   ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [{
-      src: '~/plugins/aos.js',
-      mode: 'client'
-    },
-    {
-      src: '~/plugins/cursor.js',
-      mode: 'client'
-    },
-    '~/plugins/lazyload', '~/plugins/globalComponents',
-    // { src: '~/plugins/vue-scroll-reveal', mode: 'client' }
+    src: '~/plugins/aos.js',
+    mode: 'client'
+  },
+  {
+    src: '~/plugins/cursor.js',
+    mode: 'client'
+  },
+  {
+    src: '~/plugins/vue-page-transition',
+    ssr: true
+  }
+    // '~/plugins/lazyload', '~/plugins/globalComponents'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -106,7 +108,7 @@ export default {
   buildModules: [],
 
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: 'en',
     vueI18nLoader: true,
     lazy: false,
     langDir: null,
@@ -115,58 +117,58 @@ export default {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       alwaysRedirect: false,
-      fallbackLocale: "en"
+      fallbackLocale: 'en'
     },
     vueI18n: {
-      fallbackLocale: "en",
+      fallbackLocale: 'en',
       messages: {
         uk: {
-          "links": {
-            "home": "Головна",
-            "menu": "Меню",
-            "delivery": "Доставка їжі",
-            "reserveAPlace": "Резервація місця",
-            "reservation": "Резервація",
-            "aboutUs": "Про нас",
-            "atmosphere": "Атмосфера",
-            "vacancy": "Ваканції",
-            "contact": "Контакти",
+          'links': {
+            'home': 'Головна',
+            'menu': 'Меню',
+            'delivery': 'Доставка їжі',
+            'reserveAPlace': 'Резервація місця',
+            'reservation': 'Резервація',
+            'aboutUs': 'Про нас',
+            'atmosphere': 'Атмосфера',
+            'vacancy': 'Ваканції',
+            'contact': 'Контакти'
           },
-          "ukrainian": "Українська",
-          "english": "English",
-          "russian": "Русский"
+          'ukrainian': 'Українська',
+          'english': 'English',
+          'russian': 'Русский'
         },
         en: {
-          "links": {
-            "home": "Home",
-            "menu": "Menu",
-            "delivery": "Food delivery",
-            "reserveAPlace": "Reservation of place",
-            "reservation": "Reservation",
-            "aboutUs": "About us",
-            "atmosphere": "Atmosphere",
-            "vacancy": "Vacancies",
-            "contact": "Contacts"
+          'links': {
+            'home': 'Home',
+            'menu': 'Menu',
+            'delivery': 'Food delivery',
+            'reserveAPlace': 'Reservation of place',
+            'reservation': 'Reservation',
+            'aboutUs': 'About us',
+            'atmosphere': 'Atmosphere',
+            'vacancy': 'Vacancies',
+            'contact': 'Contacts'
           },
-          "ukrainian": "Українська",
-          "english": "English",
-          "russian": "Русский"
+          'ukrainian': 'Українська',
+          'english': 'English',
+          'russian': 'Русский'
         },
         ru: {
-          "links": {
-            "home": "Главная",
-            "menu": "Меню",
-            "delivery": "Доставка еды",
-            "reserveAPlace": "Резервация места",
-            "reservation": "Резервация",
-            "aboutUs": "О нас",
-            "atmosphere": "Атмосфера",
-            "vacancy": "Вакансии",
-            "contact": "Контакты"
+          'links': {
+            'home': 'Главная',
+            'menu': 'Меню',
+            'delivery': 'Доставка еды',
+            'reserveAPlace': 'Резервация места',
+            'reservation': 'Резервация',
+            'aboutUs': 'О нас',
+            'atmosphere': 'Атмосфера',
+            'vacancy': 'Вакансии',
+            'contact': 'Контакты'
           },
-          "ukrainian": "Українська",
-          "english": "English",
-          "russian": "Русский"
+          'ukrainian': 'Українська',
+          'english': 'English',
+          'russian': 'Русский'
         }
 
       }
@@ -181,10 +183,16 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/netlify-files',
     '@nuxtjs/style-resources',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-149373590-1'
+      }
+    ],
     ['vue-scrollto/nuxt', {
-      container: "body",
+      container: 'body',
       duration: 500,
-      easing: "ease-in-out",
+      easing: 'ease-in-out',
       offset: 0,
       force: true,
       cancelable: true,
@@ -198,35 +206,34 @@ export default {
       seo: true,
       baseUrl: 'https://barbaresco.netlify.com',
       locales: [{
-          iso: 'uk-Uk',
-          code: 'uk',
-          name: 'Українська'
-        },
-        {
-          iso: 'en-US',
-          code: 'en',
-          name: 'English'
-        },
-        {
-          iso: 'ru-RU',
-          code: 'ru',
-          name: 'Русский'
-        }
+        iso: 'uk-Uk',
+        code: 'uk',
+        name: 'Українська'
+      },
+      {
+        iso: 'en-US',
+        code: 'en',
+        name: 'English'
+      },
+      {
+        iso: 'ru-RU',
+        code: 'ru',
+        name: 'Русский'
+      }
       ]
-    }],
+    }]
 
   ],
 
   proxy: {
     '/.netlify/functions/': {
-      target: 'http://localhost:8000'
+      target: 'http://localhost:3000'
     }
   },
 
   netlifyFiles: {
-    existingFilesDirectory: "./netlify/"
+    existingFilesDirectory: './netlify/'
   },
-
 
   styleResources: {
     scss: [
@@ -235,46 +242,12 @@ export default {
   },
 
   generate: {
-    routes: [
-        '/uk', '404'
-      ]
-      .concat(blogsEn.map(w => `/blog/${w}`))
-      .concat(blogsUk.map(w => `uk/blog/${w}`))
+
   },
 
   axios: {},
 
   build: {
-    extend(config) {
-      const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/i')
-      config.module.rules.splice(config.module.rules.indexOf(rule), 1)
 
-      config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        include: path.resolve(__dirname, 'contents'),
-        options: {
-          vue: {
-            root: "dynamicMarkdown"
-          }
-        }
-      }, {
-        test: /\.(jpe?g|png)$/i,
-        loader: 'responsive-loader',
-        options: {
-          placeholder: true,
-          quality: 60,
-          size: 1400,
-          adapter: require('responsive-loader/sharp')
-        }
-      }, {
-        test: /\.(gif|svg)$/,
-        loader: 'url-loader',
-        query: {
-          limit: 1000,
-          name: 'img/[name].[hash:7].[ext]'
-        }
-      });
-    }
   }
-};
+}

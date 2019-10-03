@@ -1,5 +1,4 @@
 <template>
-
   <footer id="contacts">
     <div class="container">
       <form
@@ -7,7 +6,9 @@
         class="p-2 row col-md-6 col-sm-10 mx-auto text-center"
         @submit.prevent="checkForm"
       >
-        <h5 class="text-center mx-auto mb-3">Get in touch with me.</h5>
+        <h5 class="text-center mx-auto mb-3">
+          Get in touch with me.
+        </h5>
         <div
           v-if="errors.length"
           class="text-left text-danger"
@@ -15,10 +16,12 @@
           <b>Please correct the following error(s):</b>
           <ol>
             <li
-              class="ml-3"
               v-for="error in errors"
               :key="error"
-            >{{ error }}</li>
+              class="ml-3"
+            >
+              {{ error }}
+            </li>
           </ol>
         </div>
         <div
@@ -34,11 +37,11 @@
           class="form-group input-group col-6"
         >
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-user"></i></span>
+            <span class="input-group-text"><i class="fas fa-user" /></span>
           </div><input
+            v-model="name"
             type="text"
             name="name"
-            v-model="name"
             class="form-control"
             placeholder="Name"
             required
@@ -51,12 +54,12 @@
           class="form-group input-group col-6"
         >
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            <span class="input-group-text"><i class="fas fa-envelope" /></span>
           </div>
           <input
+            v-model="email"
             type="email"
             name="email"
-            v-model="email"
             class="form-control"
             placeholder="Email"
             required
@@ -69,12 +72,12 @@
           class="form-group input-group col-12"
         >
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-at"></i></span>
+            <span class="input-group-text"><i class="fas fa-at" /></span>
           </div>
           <input
+            v-model="subject"
             type="text"
             name="subject"
-            v-model="subject"
             class="form-control"
             placeholder="Subject"
           >
@@ -86,18 +89,18 @@
           class="form-group input-group col-12"
         >
           <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fas fa-comment-alt"></i></span>
+            <span class="input-group-text"><i class="fas fa-comment-alt" /></span>
           </div>
           <textarea
-            name="msg"
             id="msg"
             v-model="message"
+            name="msg"
             class="form-control"
             placeholder="Write your message"
             cols="30"
             rows="4"
             required
-          ></textarea>
+          />
         </label>
 
         <label
@@ -106,9 +109,9 @@
           class="form-group mx-auto"
         >
           <input
+            id="submit"
             type="submit"
             name="submit"
-            id="submit"
             class="btn btn-primary"
             value="Send"
           >
@@ -142,16 +145,12 @@
           </h6>
         </div>
       </div>
-
     </div>
-
   </footer>
-
 </template>
 
-
 <script>
-import axios from "axios"
+import axios from 'axios'
 export default {
   data () {
     return {
@@ -162,40 +161,38 @@ export default {
       subject: null,
       message: null
     }
-
   },
   methods: {
-    checkForm: function (e) {
-      this.errors = [];
-      this.success = false;
+    checkForm (e) {
+      this.errors = []
+      this.success = false
 
       if (!this.name) {
-        this.errors.push("Name Needed");
+        this.errors.push('Name Needed')
       }
       if (!this.email) {
-        this.errors.push("Email Needed");
+        this.errors.push('Email Needed')
       }
       if (!this.subject) {
-        this.errors.push("Subject Needed");
+        this.errors.push('Subject Needed')
       }
       if (!this.message) {
-        this.errors.push("Message Needed");
+        this.errors.push('Message Needed')
       }
       if (!this.errors.length) {
-        this.sendMessage();
+        this.sendMessage()
       }
-      e.preventDefault();
+      e.preventDefault()
     },
     sendMessage () {
       axios
         .post(`https://api.telegram.org/bot971666849:AAEPhgDVYttaZZxm35uC5IFU-YO3MdH8nh0/sendMessage?chat_id=-1001231729418&text=${this.name} ${this.email} ${this.subject} ${this.message}`)
-      this.name = this.email = this.subject = this.message = null;
-      this.success = true;
-    },
+      this.name = this.email = this.subject = this.message = null
+      this.success = true
+    }
   }
 }
 </script>
-
 
 <style lang="scss" scoped>
 footer {

@@ -1,9 +1,6 @@
 <template>
-
   <div id="app">
-
     <div class="grid">
-
       <tilt
         class="cols"
         max="30"
@@ -18,11 +15,11 @@
               class="tilter__image"
               src="~/assets/img/neniEmsu.jpg"
               alt="img03"
-            />
+            >
             <div class="tilter__deco tilter__deco--shine">
-              <div></div>
+              <div />
             </div>
-            <div class="tilter__deco tilter__deco--overlay"></div>
+            <div class="tilter__deco tilter__deco--overlay" />
             <figcaption class="tilter__caption">
               <h3 class="tilter__title">Neni Emmanuel</h3>
               <p class="tilter__description">Mostly Full-Stack Dev</p>
@@ -47,11 +44,8 @@
           alt=""
         >
       </tilt>
-
     </div>
-
   </div>
-
 </template>
 
 <script>
@@ -62,8 +56,6 @@ export default {
   }
 }
 </script>
-
-
 
 <style lang="scss" scoped>
 .grid {
@@ -191,4 +183,3 @@ img {
   letter-spacing: 0.15em;
 }
 </style>
-

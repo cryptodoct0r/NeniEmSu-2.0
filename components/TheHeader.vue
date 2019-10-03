@@ -39,29 +39,35 @@
           <b-img-lazy
             src="~/assets/img/neniemsu-logo.svg"
             class="img-fluid"
-          ></b-img-lazy>
+          />
         </b-navbar-brand>
 
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-navbar-toggle target="nav-collapse" />
 
         <b-collapse
           id="nav-collapse"
           is-nav
         >
-
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
+            <b-nav-item :to="localePath({name: 'index'},$i18n.locale)">
+              {{ $t('home') }}
+            </b-nav-item>
 
-            <b-nav-item :to="localePath({name: 'index'},$i18n.locale)">{{$t('home')}}</b-nav-item>
-
-            <b-nav-item :to="localePath({name: 'portfolio'},$i18n.locale)">{{$t('portfolio')}}</b-nav-item>
+            <b-nav-item :to="localePath({name: 'portfolio'},$i18n.locale)">
+              {{ $t('portfolio') }}
+            </b-nav-item>
 
             <b-nav-item
-              to="#contact"
               v-scroll-to="'#contacts'"
-            >{{$t('contact')}}</b-nav-item>
+              to="#contact"
+            >
+              {{ $t('contact') }}
+            </b-nav-item>
 
-            <b-nav-item :to="localePath({name: 'blog'},$i18n.locale)">{{$t('blog')}}</b-nav-item>
+            <b-nav-item :to="localePath({name: 'blog'},$i18n.locale)">
+              {{ $t('blog') }}
+            </b-nav-item>
 
             <b-nav-item-dropdown
               :text="$t('language')"
@@ -70,21 +76,26 @@
               <b-dropdown-item
                 v-if="$i18n.locale !== 'en'"
                 :to="switchLocalePath('en')"
-              >English</b-dropdown-item>
+              >
+                English
+              </b-dropdown-item>
               <b-dropdown-item
                 v-if="$i18n.locale !== 'uk'"
                 :to="switchLocalePath('uk')"
-              >Українська</b-dropdown-item>
+              >
+                Українська
+              </b-dropdown-item>
               <b-dropdown-item
                 v-if="$i18n.locale !== 'ru'"
                 :to="switchLocalePath('ru')"
-              >Русский</b-dropdown-item>
+              >
+                Русский
+              </b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
       </div>
     </b-navbar>
-
   </div>
 </template>
 
@@ -94,7 +105,7 @@ export default {
     return {
 
     }
-  },
+  }
 }
 </script>
 
