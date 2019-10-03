@@ -3,21 +3,21 @@
   "uk": {
     "language": "Мова",
     "portfolio": "Портфоліо",
-    "timeline": "Хронологія",
+    "home": "Головна",
     "contact": "Контакти",
     "blog": "Блог"
   },
   "en": {
    "language": "Language",
    "portfolio": "Portfolio",
-   "timeline": "Timeline",
+   "home": "Home",
    "contact": "Contacts",
    "blog": "Blog"
   },
   "ru": {
     "language": "язык",
     "portfolio": "Портфолио",
-    "timeline": "График",
+    "home": "Главная",
      "contact": "Контакты",
      "blog": "Блог"
   }
@@ -52,12 +52,10 @@
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
 
+            <b-nav-item :to="localePath({name: 'index'},$i18n.locale)">{{$t('home')}}</b-nav-item>
+
             <b-nav-item :to="localePath({name: 'portfolio'},$i18n.locale)">{{$t('portfolio')}}</b-nav-item>
 
-            <b-nav-item
-              href="#"
-              disabled
-            >{{$t('timeline')}}</b-nav-item>
             <b-nav-item
               to="#contact"
               v-scroll-to="'#contacts'"

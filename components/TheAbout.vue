@@ -22,7 +22,10 @@
               :perspective=500
               :reverse="true"
             >
-              <a class="tilter tilter--2">
+              <nuxt-link
+                :to="localePath({name: 'about-me'},$i18n.locale)"
+                class="tilter tilter--2"
+              >
                 <figure class="tilter__figure">
                   <img
                     class="tilter__image"
@@ -44,7 +47,7 @@
                     <path d="M20.5,20.5h260v375h-260V20.5z" />
                   </svg>
                 </figure>
-              </a>
+              </nuxt-link>
             </tilt>
           </div>
         </div>
