@@ -16,6 +16,23 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "relation",
+          collection: "categories",
+          searchFields: "name",
+          valueField: "name",
+          multiple: true,
+        }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Daniel Kelly",
+        }
+      - { label: "Featured Image", name: "featureImage", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
