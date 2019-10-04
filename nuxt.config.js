@@ -232,7 +232,7 @@ export default {
 
   proxy: {
     '/.netlify/functions/': {
-      target: 'http://localhost:3000'
+      target: 'https://localhost:3000'
     }
   },
 

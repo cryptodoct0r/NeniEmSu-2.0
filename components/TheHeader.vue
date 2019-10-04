@@ -28,7 +28,6 @@
   <div id="headerComponent">
     <b-navbar
       toggleable="lg"
-      fixed="top"
       type="dark"
     >
       <div class="container">
@@ -136,7 +135,7 @@ nav.navbar {
   transition: all 0.5s ease;
 
   // background-color: rgba(34, 34, 34, 0.8);
-  background-color: rgba(49, 56, 64, 0.8);
+  background-color: rgb(22, 22, 22);
 }
 
 nav.navbar .navbar-toggler,

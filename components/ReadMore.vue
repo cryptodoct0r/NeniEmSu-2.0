@@ -2,7 +2,7 @@
   <b-button
     class="read-more border-0 mb-5"
     variant="primary"
-    :to="`blog/${post.slug}`"
+    :to="`/blog/${post.slug}`"
   >
     <span><b class="text-uppercase">Read More</b><span v-html="readingTime" /></span>
   </b-button>

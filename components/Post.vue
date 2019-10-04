@@ -29,7 +29,7 @@
     <b-col class="mb-5 py-md-5">
       <slot>
         <nuxt-link
-          :to="`blog/${post.slug}`"
+          :to="`/blog/${post.slug}`"
           class="text-dark"
         >
           <h2
