@@ -9,11 +9,63 @@
           <h1 class="text-center text-uppercase h5 font-family-sans-serif mb-5">
             Latest Stories
           </h1>
-          <Post
+          <article
             v-for="post in blogPosts"
-            :key="post.slug"
-            :post="post"
-          />
+            :key="post.id"
+            class="row"
+          >
+            <div
+              :data-first="post.title.charAt(0)"
+              class="meta-data py-md-5 text-center position-relative d-flex col-md-3"
+            >
+              <div class="mx-auto mb-2 position-relative">
+                <span class="post-date font-weight-bold">{{ post.date }}</span><i class="d-none d-md-block">in:</i>
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item m-0">
+                    <nuxt-link
+                      :to="post.category[0]"
+                      class="text-uppercase font-weight-bold mx-1"
+                    >
+                      {{ post.category[0] }}
+                    </nuxt-link>
+                  </li>
+                </ul>
+                <div>
+                  <i>by: </i>
+                  <nuxt-link
+                    to="#"
+                    class="font-weight-bold"
+                  >
+                    {{ post.author }}
+                  </nuxt-link>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5 py-md-5 col">
+              <nuxt-link
+                :to="`blog/${post.slug}`"
+                class="text-dark"
+              >
+                <h2 class="h1 font-family-headings post-title text-break mb-4">
+                  {{ post.title }}
+                </h2>
+              </nuxt-link>
+              <div class="post-excerpt text-break mb-4">
+                <p>{{ post.description }}</p>
+              </div>
+              <nuxt-link
+                :to="`blog/${post.slug}`"
+                target="_self"
+                class="btn read-more border-0 mb-5 btn-primary"
+              >
+                <span>
+                  <b class="text-uppercase">Read More</b>
+                  <span> ≈1min</span>
+                </span>
+              </nuxt-link>
+            </div>
+          </article>
+
           <nav
             role="navigation"
             aria-label="Pagination Navigation"
@@ -34,11 +86,9 @@
               class="page-link rounded"
             >›</a>
           </nav>
-          <!-- <Pagination :info="$page.allWordPressPost.pageInfo" /> -->
         </div>
       </main>
-      <siteSidebar />
-      <!-- <div class="bg-light mt-4 mt-lg-5 p-4 rounded col-lg-3">
+      <div class="bg-light mt-4 mt-lg-5 p-4 rounded col-lg-3">
         <aside class="mb-5">
           <h2 class="mb-3 font-family-sans-serif h4">
             About
@@ -200,21 +250,13 @@
             </li>
           </ul>
         </aside>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import siteSidebar from '~/components/SiteSidebar'
-import Post from '~/components/Post.vue'
-// import Pagination from '~/components/Pagination.vue'\
 export default {
-  components: {
-    Post,
-    siteSidebar
-    // Pagination
-  },
   head () {
     return {
       title: 'Blog - NeniEmsu',
@@ -230,3 +272,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+p {
+  color: #526488;
+}
+</style>
