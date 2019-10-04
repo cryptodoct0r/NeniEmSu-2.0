@@ -1,5 +1,7 @@
 <template>
-  <!-- <Pager :info="info" linkClass="page-link rounded" class="pagination justify-content-center"/> -->
+  <div>
+    <!-- <Pager :info="info" linkClass="page-link rounded" class="pagination justify-content-center"/> -->
+  </div>
 </template>
 
 <script>
