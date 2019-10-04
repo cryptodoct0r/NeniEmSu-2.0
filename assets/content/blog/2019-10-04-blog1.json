@@ -1,6 +1,12 @@
 {
-  "title": "blog1",
+  "title": "Blog with netlify cms",
+  "subtitle": "I netlity awsome or what?",
   "date": "2019-10-04T04:48:12.643Z",
-  "description": "My first blog post ",
+  "category": [
+    "Dev"
+  ],
+  "author": "Neni Emmanuel",
+  "featureImage": "/img/fb_img_1507316037252.jpg",
+  "description": "Using netlify as cms",
   "body": "jdjkkddjdjd kkdjjdjdkdk jfdofijrsdjf fjlajfafugja jahd;jaf;ourdjapjd"
 }
