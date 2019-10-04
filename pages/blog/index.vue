@@ -628,6 +628,11 @@ export default {
         { hid: 'robots', name: 'robots', content: 'index' }
       ]
     }
+  },
+  computed: {
+    blogPosts () {
+      return this.$store.state.blogPosts
+    }
   }
 }
 </script>

@@ -176,6 +176,7 @@ export default {
   },
 
   modules: [
+    '@nuxtjs/markdownit',
     'nuxt-rfg-icon',
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
@@ -225,6 +226,10 @@ export default {
 
   ],
 
+  markdownit: {
+    injected: true
+  },
+
   proxy: {
     '/.netlify/functions/': {
       target: 'http://localhost:3000'
@@ -242,7 +247,15 @@ export default {
   },
 
   generate: {
-
+    routes () {
+      const fs = require('fs')
+      return fs.readdirSync('./assets/content/blog').map((file) => {
+        return {
+          route: `/blog/${file.slice(2, -5)}`, // Remove the .json from the end of the filename
+          payload: require(`./assets/content/blog/${file}`)
+        }
+      })
+    }
   },
 
   axios: {},
