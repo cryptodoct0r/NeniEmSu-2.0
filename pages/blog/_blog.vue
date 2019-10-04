@@ -1,5 +1,5 @@
 <template>
-  <article class="container mt-5 pt-5">
+  <article class="container my-5">
     <div class="row">
       <div
         :data-first="blogPost.title.charAt(0)"

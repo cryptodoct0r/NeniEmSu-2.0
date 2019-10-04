@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="container"
-    style="margin-top: 8%;"
-  >
+  <div class="container my-5">
     <div class="row align-items-start">
       <main class="bg-white p-0 rounded shadow-lg col-lg-9 col-12">
         <div class="overflow-hidden p-4 p-sm-5 ">

@@ -199,7 +199,8 @@ footer {
   margin-top: 20px;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #313840;
+  // background-color: #313840;
+  background-color: rgb(36, 41, 46);
   color: #888888;
   bottom: 0;
   margin-bottom: 0;

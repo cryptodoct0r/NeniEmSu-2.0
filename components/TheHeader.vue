@@ -134,8 +134,8 @@ nav.navbar {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 
-  // background-color: rgba(34, 34, 34, 0.8);
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(36, 41, 46);
+  // background-color: rgb(22, 22, 22);
 }
 
 nav.navbar .navbar-toggler,

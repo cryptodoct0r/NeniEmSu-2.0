@@ -1,6 +1,6 @@
 <template>
-  <div style="margin-top: 100px">
-    <h1 class="pt-5 text-center">
+  <div class="container my-5">
+    <h1 class="text-center">
       Portfolio
     </h1>
 
