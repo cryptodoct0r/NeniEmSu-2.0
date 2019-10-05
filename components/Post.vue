@@ -17,12 +17,12 @@
         />
         <div v-if="post.author">
           <i>by: </i>
-          <g-link
+          <nuxt-link
             :to="post.author"
             class="font-weight-bold"
           >
             {{ post.author }}
-          </g-link>
+          </nuxt-link>
         </div>
       </div>
     </b-col>

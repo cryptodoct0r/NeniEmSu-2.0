@@ -52,17 +52,17 @@
       </div>
     </div>
 
-    <div class="chevron-container mx-auto">
-      <nuxt-link
-        v-scroll-to="'#about'"
-        :to="localePath({name: 'index'},$i18n.locale)"
-      >
+    <nuxt-link
+      v-scroll-to="'#about'"
+      :to="localePath({name: 'index'},$i18n.locale)"
+    >
+      <div class="chevron-container mx-auto">
         <div class="chevron" />
         <div class="chevron" />
         <div class="chevron" />
         <span class="text">Scroll down</span>
-      </nuxt-link>
-    </div>
+      </div>
+    </nuxt-link>
 
     <div class="waveWrapperInner bgTop">
       <div
@@ -357,7 +357,7 @@ p {
     height: 24px;
 
     cursor: pointer;
-    top: 68vh;
+    top: 58vh;
     z-index: 16;
   }
 }

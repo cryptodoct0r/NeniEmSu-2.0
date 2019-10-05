@@ -32,9 +32,19 @@
         </div>
       </div>
       <div class="mb-5 py-md-5 col">
-        <h1 class="mb-5">
-          {{ blogPost.title }}
-        </h1>
+        <header class="mb-4">
+          <h1 class="mb-5">
+            {{ blogPost.title }}
+          </h1>
+          <!-- <b-img
+            v-if="featureImage"
+            :src="featureImage"
+            :alt="blogpost.title"
+            fluid
+            class="mt-4"
+          /> -->
+        </header>
+
         <div
           class="page-content"
           v-html="$md.render(blogPost.body)"
