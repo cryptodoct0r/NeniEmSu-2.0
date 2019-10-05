@@ -48,6 +48,6 @@ export const mutations = {
     state.animation = animation
   },
   setBlogPosts (state, list) {
-    state.blogPosts = list
+    state.blogPosts = list.sort((a, b) => new Date(a.date) - new Date(b.date))
   }
 }
