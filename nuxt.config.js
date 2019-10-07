@@ -56,7 +56,7 @@ export default {
   manifest: {
     name: 'Neni Emmanuel',
     short_name: 'NeniEmsu',
-    description: 'Top restaurants in ternopil in one place.',
+    description: 'Blog and Portfolio, Making the web awesome one pixel at a time.',
     theme_color: '#000000',
     background_color: '#0A0A0A',
     display: 'standalone',

@@ -1,7 +1,7 @@
 {
-  "name": "neniemsu",
-  "version": "1.0.0",
-  "description": "My Portfolio and blog site",
+  "name": "NeniEmSu",
+  "version": "3.0.0",
+  "description": "Blog and Portfolio, Making the web awesome one pixel at a time.",
   "author": "Neni Emmanuel",
   "private": true,
   "scripts": {
