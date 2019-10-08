@@ -127,12 +127,7 @@ export default {
           links: {
             home: 'Головна',
             menu: 'Меню',
-            delivery: 'Доставка їжі',
-            reserveAPlace: 'Резервація місця',
-            reservation: 'Резервація',
             aboutUs: 'Про нас',
-            atmosphere: 'Атмосфера',
-            vacancy: 'Ваканції',
             contact: 'Контакти'
           },
           ukrainian: 'Українська',
@@ -143,12 +138,9 @@ export default {
           links: {
             home: 'Home',
             menu: 'Menu',
-            delivery: 'Food delivery',
-            reserveAPlace: 'Reservation of place',
-            reservation: 'Reservation',
+
             aboutUs: 'About us',
-            atmosphere: 'Atmosphere',
-            vacancy: 'Vacancies',
+
             contact: 'Contacts'
           },
           ukrainian: 'Українська',
@@ -159,12 +151,7 @@ export default {
           links: {
             home: 'Главная',
             menu: 'Меню',
-            delivery: 'Доставка еды',
-            reserveAPlace: 'Резервация места',
-            reservation: 'Резервация',
             aboutUs: 'О нас',
-            atmosphere: 'Атмосфера',
-            vacancy: 'Вакансии',
             contact: 'Контакты'
           },
           ukrainian: 'Українська',
