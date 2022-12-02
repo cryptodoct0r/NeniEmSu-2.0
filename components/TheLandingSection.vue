@@ -39,16 +39,19 @@
               href="https://github.com/NeniEmSu"
               target="_blank"
               rel="no-referal"
+              class="icon"
             ><i class="fab fa-github" /></a>
             <a
               href="https://twitter.com/NeniEmmanuel"
               target="_blank"
               rel="no-referal"
+              class="icon"
             ><i class="fab fa-twitter" /></a>
             <a
               href="https://www.linkedin.com/in/emmanuel-neni-a67060152/"
               target="_blank"
               rel="no-referal"
+              class="icon"
             ><i class="fab fa-linkedin-in" /></a>
           </div>
         </div>
@@ -228,7 +231,7 @@ q {
   margin-top: 20px;
 }
 
-.social-icons a {
+.social-icons a.icon {
   display: inline-block;
   font-size: 15px;
   line-height: 26px;
