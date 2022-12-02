@@ -26,14 +26,17 @@
           </p>
 
           <div class="social-icons">
-            <b-button
+            <b-link
               variant="dark"
               class="btn read-more border-0 btn-primary"
+              role="button"
+              target="_blank"
+              href="https://www.linkedin.com/safety/go?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F10abKUrPYGwU-cPTmuqQj6FQFzNs0EYZMlCqTRqghteI%2Fedit%3Fusp%3Dsharing&trk=flagship-messaging-web&messageThreadUrn=urn%3Ali%3AmessagingThread%3A2-OGFhMDVkYWQtMTFkZS00ZWUyLWI1YWEtMmNkMGJhM2MzOTEwXzAxMw%3D%3D&lipi=urn%3Ali%3Apage%3Amessaging_thread%3Bbd3cefb7-9350-485c-8966-a74e5cc3bd72"
             >
               Download Cv
-            </b-button>
+            </b-link>
             <a
-              href="https://github.com/cryptodoct0r"
+              href="https://github.com/NeniEmSu"
               target="_blank"
               rel="no-referal"
             ><i class="fab fa-github" /></a>
