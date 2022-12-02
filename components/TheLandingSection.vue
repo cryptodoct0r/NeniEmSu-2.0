@@ -31,7 +31,7 @@
               class="btn read-more border-0 btn-primary"
               role="button"
               target="_blank"
-              href="https://www.linkedin.com/safety/go?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F10abKUrPYGwU-cPTmuqQj6FQFzNs0EYZMlCqTRqghteI%2Fedit%3Fusp%3Dsharing&trk=flagship-messaging-web&messageThreadUrn=urn%3Ali%3AmessagingThread%3A2-OGFhMDVkYWQtMTFkZS00ZWUyLWI1YWEtMmNkMGJhM2MzOTEwXzAxMw%3D%3D&lipi=urn%3Ali%3Apage%3Amessaging_thread%3Bbd3cefb7-9350-485c-8966-a74e5cc3bd72"
+              href="https://docs.google.com/document/d/10abKUrPYGwU-cPTmuqQj6FQFzNs0EYZMlCqTRqghteI/edit?usp=sharing"
             >
               Download Cv
             </b-link>
