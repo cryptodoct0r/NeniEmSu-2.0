@@ -27,7 +27,7 @@
     "bootstrap-vue": "^2.0.2",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.10.0",
+    "nuxt": "^3.4.3",
     "nuxt-i18n": "^6.3.0",
     "nuxt-rfg-icon": "^0.6.4",
     "nuxt-webfontloader": "^1.1.0",
